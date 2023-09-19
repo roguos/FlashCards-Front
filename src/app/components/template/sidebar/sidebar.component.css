@@ -10,7 +10,7 @@
 }
 button{
     background-color: #aaa;
-    background-image: url('/assets/images/icons/arrows.svg');
+    background-image: url(src/assets/images/icons/arrows.svg);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
