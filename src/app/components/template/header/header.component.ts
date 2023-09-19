@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  toggleListProfile(){
+    document.querySelector('.dropdown-list-profile')?.classList.toggle('show-list-profile')
+  }
 }
