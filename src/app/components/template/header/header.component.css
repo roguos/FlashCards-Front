@@ -1,0 +1,38 @@
+.header{
+    background-color: var(--cor-teste-3);
+    display: flex;
+    width: 100vw;
+    height: var(--header-height);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+.img-profile{
+    border-radius: 50%;
+}
+.dropdown-list-profile{
+    border-radius: 8px;
+    background-color: var(--cor-teste-5);
+    transform: scaleY(0);
+    transform-origin: 100% 00%;
+    right: 0;
+    list-style: none;
+    position: absolute;
+    transition: .7s ease;
+    overflow: hidden;
+}
+.dropdown-list-profile li{
+    padding: 0.5em 1.2em;
+}
+.show-list-profile{
+    transform-origin: 100% 0 0;
+    transform: scaleY(1);
+}
+.dropdown-item-profile{
+    text-decoration: none;
+}
