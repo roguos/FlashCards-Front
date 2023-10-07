@@ -1,29 +1,43 @@
-<header class="header">
-  <nav class="navbar">
-    <a class="navbar-brand" href="#"
-      ><img
-        src="assets/images/logo-black-transparente.png"
-        alt="logo FlashCards"
-        width="140"
-    /></a>
-
-    <div class="dropdown-profile">
-      <a href="#" class="" (click)="toggleListProfile()" (blur)="toggleListProfile()">
+<mat-toolbar color="primary" class="header mat-elevation-z3">
+  <mat-toolbar-row>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="sidenavShowToggle(sidenavShow)"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span
+      ><a href="">
         <img
-          src="https://github.com/mdo.png"
-          alt="mdo"
-          width="32"
-          height="32"
-          class="img-profile"
-        />
-      </a>
-      <ul class="dropdown-list-profile">
-        <li><a class="dropdown-item-profile" href="#">Novo Projeto</a></li>
-        <li><a class="dropdown-item-profile" href="#">Configurações</a></li>
-        <li><a class="dropdown-item-profile" href="#">Perfil</a></li>
-        <li><hr /></li>
-        <li><a class="dropdown-item-profile" href="#">Sair</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+          src="assets/images/logo-white-transparente.png"
+          alt="logo"
+          class="logo"
+        /> </a
+    ></span>
+    <span class="spacer"></span>
+    <button
+      mat-icon-button
+      mat-card-avatar
+      class="header-avatar"
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    ></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>account_circle</mat-icon>
+        <span>Perfil</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Configurações</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item disabled>
+        <mat-icon>logout</mat-icon>
+        <span>Sair</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row></mat-toolbar
+>

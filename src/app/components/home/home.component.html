@@ -1,0 +1,4 @@
+<app-header [sidenavShow]="sidenavShow" (onSidenavShowChange)="sidenavShow = $event"></app-header>
+<app-sidebar [sidenavShow]="sidenavShow"></app-sidebar>
+<app-main [class]="{expanded: sidenavShow}"></app-main>
+<app-footer></app-footer>

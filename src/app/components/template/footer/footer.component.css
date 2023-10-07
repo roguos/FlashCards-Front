@@ -1,12 +1,21 @@
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cor-teste-3);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: var(--footer-height);
-    color: #505050;
+.footer {
+  position: fixed;
+  bottom: 0;
+  justify-content: flex-end;
+}
+.footer span {
+  font-size: small;
+  font-weight: 100;
+}
+.footer span.brand {
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  background: -webkit-linear-gradient(
+    142deg,
+    rgba(7, 113, 238, 1) 0%,
+    rgba(27, 218, 203, 1) 50%,
+    rgb(4, 175, 55) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
