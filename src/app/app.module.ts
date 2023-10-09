@@ -22,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { CardDefaultComponent } from './components/template/cards/card-default/card-default.component';
 import { CardImageComponent } from './components/template/cards/card-image/card-image.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { CardImageComponent } from './components/template/cards/card-image/card-
     MatDividerModule,
     MatCardModule,
     MatListModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
