@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FlashcardsService } from 'src/app/service/flashcards.service';
+import { FlashcardsService } from 'src/app/services/flashcards.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
