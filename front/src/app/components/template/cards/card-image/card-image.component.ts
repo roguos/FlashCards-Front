@@ -8,7 +8,4 @@ import { FlashcardsService } from 'src/app/services/flashcards.service';
 })
 export class CardImageComponent {
   constructor(public cardsService: FlashcardsService) {}
-  mostrar() {
-    this.cardsService.getflashcards();
-  }
 }
