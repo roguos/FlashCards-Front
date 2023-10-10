@@ -11,9 +11,7 @@
       *ngFor="let i of [1, 2, 3]"
     >
       <div class="content">
-        <app-card-default
-          [cardData]="FCService.flashcards[i]"
-        ></app-card-default>
+        <ng-content></ng-content>
       </div>
     </label>
   </div>
