@@ -1,0 +1,34 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: hidden;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.nav-list a span{
+  display: flex;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d1d1d1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff4081; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3f51b5; 
+}

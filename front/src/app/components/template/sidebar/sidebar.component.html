@@ -1,0 +1,36 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav
+    [class]="{ sidenav: true, sidenavSlim: boo }"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseOut()"
+    mode="side"
+    opened
+    [fixedInViewport]="true"
+    fixedTopGap="64"
+  >
+    <mat-nav-list class="nav-list">
+      <mat-divider></mat-divider>
+      <a mat-list-item>
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Flashcards"
+          fontIcon="view_carousel"
+          class="item"
+        ></mat-icon>
+        <span [class]="{ item: true, itemSlim: boo }">Flashcards</span>
+      </a>
+      <mat-divider></mat-divider>
+
+      <a mat-list-item disabled>
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Dashboard"
+          fontIcon="dashboard"
+          class="item"
+        ></mat-icon>
+        <span [class]="{ item: true, itemSlim: boo }">Dashboard</span>
+      </a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>
