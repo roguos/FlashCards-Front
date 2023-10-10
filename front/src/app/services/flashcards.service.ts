@@ -8,14 +8,13 @@ import { IFlashcard } from '../interfaces/flashcard';
 export class FlashcardsService {
   constructor(private http: HttpClient) {}
 
-  data: IFlashcard[] = [];
+  flashcards: IFlashcard[] = [];
 
   getflashcards() {
     this.http
       .get<IFlashcard[]>('http://localhost:3000/flashcards')
-      .subscribe((dat) => {
-        this.data = dat;
-        console.log(this.data);
+      .subscribe((data) => {
+        this.flashcards = data;
       });
   }
 }

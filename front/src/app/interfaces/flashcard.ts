@@ -1,3 +1,7 @@
 export interface IFlashcard {
-  id: string;
+  id: number;
+  title: string;
+  tip: string;
+  text: string;
+  topic: string;
 }

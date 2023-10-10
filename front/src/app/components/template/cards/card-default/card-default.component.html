@@ -1,14 +1,21 @@
-<mat-card class="card">
-  <mat-card-header>
-    <mat-card-subtitle>Categoria</mat-card-subtitle>
-    <mat-card-title>Título</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>This card indeterminates progress bar.</p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil sed
-      assumenda reiciendis quo, quasi commodi, magnam cumque consequuntur
-      similique minus odio, numquam nemo eos voluptas atque ut fuga quia vitae?
-    </p>
-  </mat-card-content>
-</mat-card>
+<div class="card">
+  <mat-card class="">
+    <mat-card-header>
+      <mat-card-subtitle>{{ cardData.topic }}</mat-card-subtitle>
+      <mat-card-title>{{ cardData.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{ cardData.text }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="">
+    <mat-card-header>
+      <mat-card-subtitle>{{ cardData.topic }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-title>{{ cardData.tip }}</mat-card-title>
+    </mat-card-content>
+  </mat-card>
+</div>

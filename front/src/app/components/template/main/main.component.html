@@ -1,2 +1,3 @@
-<app-card-default></app-card-default>
-<app-card-image></app-card-image>
+<ng-container *ngFor="let card of FCService.flashcards">
+    <app-card-default [cardData]="card"></app-card-default>
+</ng-container>
