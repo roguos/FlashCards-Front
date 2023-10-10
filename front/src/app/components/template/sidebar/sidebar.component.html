@@ -1,6 +1,8 @@
 <mat-sidenav-container class="container">
   <mat-sidenav
-    [class]="{ sidenav: true, sidenavSlim: sidenavShow }"
+    [class]="{ sidenav: true, sidenavSlim: boo }"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseOut()"
     mode="side"
     opened
     [fixedInViewport]="true"
@@ -15,7 +17,7 @@
           fontIcon="view_carousel"
           class="item"
         ></mat-icon>
-        <span [class]="{ item: true, itemSlim: sidenavShow }">Flashcards</span>
+        <span [class]="{ item: true, itemSlim: boo }">Flashcards</span>
       </a>
       <mat-divider></mat-divider>
 
@@ -26,7 +28,7 @@
           fontIcon="dashboard"
           class="item"
         ></mat-icon>
-        <span [class]="{ item: true, itemSlim: sidenavShow }">Dashboard</span>
+        <span [class]="{ item: true, itemSlim: boo }">Dashboard</span>
       </a>
       <mat-divider></mat-divider>
     </mat-nav-list>

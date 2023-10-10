@@ -2,7 +2,3 @@ app-main {
   transition: 0.6s ease;
   margin-left: 160px;
 }
-
-.expanded {
-  margin-left: 56px;
-}
