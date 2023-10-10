@@ -23,6 +23,7 @@ import { MatListModule } from '@angular/material/list';
 import { CardDefaultComponent } from './components/template/cards/card-default/card-default.component';
 import { CardImageComponent } from './components/template/cards/card-image/card-image.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselComponent } from './components/template/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     CardDefaultComponent,
     CardImageComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,

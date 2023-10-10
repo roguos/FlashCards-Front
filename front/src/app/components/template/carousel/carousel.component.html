@@ -1,0 +1,20 @@
+<div class="container">
+  <input type="radio" name="slider" id="item-1" checked />
+  <input type="radio" name="slider" id="item-2" />
+  <input type="radio" name="slider" id="item-3" />
+
+  <div class="cards">
+    <label
+      class="card"
+      [for]="'item-' + i"
+      [id]="'item-' + i"
+      *ngFor="let i of [1, 2, 3]"
+    >
+      <div class="content">
+        <app-card-default
+          [cardData]="FCService.flashcards[i]"
+        ></app-card-default>
+      </div>
+    </label>
+  </div>
+</div>
