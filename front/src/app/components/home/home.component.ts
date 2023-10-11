@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   constructor() {}
   show: Number = 1;
-  getShow();
+  // getShow();
 }
