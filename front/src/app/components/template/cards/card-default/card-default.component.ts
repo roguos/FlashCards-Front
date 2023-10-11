@@ -9,9 +9,16 @@ import { IFlashcard } from 'src/app/interfaces/flashcard';
 export class CardDefaultComponent {
   @Input() cardData: IFlashcard = {
     id: 0,
-    title: '',
-    tip: '',
-    text: '',
-    topic: ''
+    title: 'Este é um Título',
+    tip: 'Esta é uma pergunta ou uma dica para lembrar o conteúdo do cartão',
+    text: 'Este é o Texto',
+    topic: 'Este é o Tópico/Matéria',
+  };
+  active: boolean = true;
+  focus: boolean = false;
+  handleFlapCards() {
+    if (this.focus) {
+      this.active = !this.active;
+    }
   }
 }

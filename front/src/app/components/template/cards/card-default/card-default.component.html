@@ -1,5 +1,5 @@
-<div class="card">
-  <mat-card class="">
+<div class="card" (click)="handleFlapCards()">
+  <mat-card [class]="{ front: true, active: active }">
     <mat-card-header>
       <mat-card-subtitle>{{ cardData.topic }}</mat-card-subtitle>
       <mat-card-title>{{ cardData.title }}</mat-card-title>
@@ -10,7 +10,7 @@
       </p>
     </mat-card-content>
   </mat-card>
-  <mat-card class="">
+  <mat-card [class]="{ back: true, active: !active }">
     <mat-card-header>
       <mat-card-subtitle>{{ cardData.topic }}</mat-card-subtitle>
     </mat-card-header>
