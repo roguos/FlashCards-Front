@@ -25,6 +25,7 @@ import { CardImageComponent } from './components/template/cards/card-image/card-
 import { HttpClientModule } from '@angular/common/http';
 import { FlashcardsViewComponent } from './components/template/views/flashcards-view/flashcards-view.component';
 import { DashboardViewComponent } from './components/template/views/dashboard-view/dashboard-view.component';
+import { CarouselComponent } from './components/template/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { DashboardViewComponent } from './components/template/views/dashboard-vi
     CardImageComponent,
     FlashcardsViewComponent,
     DashboardViewComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,

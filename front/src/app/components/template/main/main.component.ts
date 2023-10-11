@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IFlashcard } from 'src/app/interfaces/flashcard';
 import { FlashcardsService } from 'src/app/services/flashcards.service';
 
 @Component({
@@ -13,4 +14,7 @@ export class MainComponent {
   setShow(i: Number) {
     this.show = i;
   }
+  arrayLocal: IFlashcard[] = [
+    { id: 0, title: '', tip: '', text: '', topic: '' },
+  ];
 }
