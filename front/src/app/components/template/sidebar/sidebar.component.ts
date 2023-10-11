@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,6 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
+  @Output() show = new EventEmitter<Number>();
+
+  on(int: Number) {
+    this.show.emit(int);
+  }
   boo: boolean = true;
 
   onMouseEnter() {

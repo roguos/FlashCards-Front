@@ -23,6 +23,8 @@ import { MatListModule } from '@angular/material/list';
 import { CardDefaultComponent } from './components/template/cards/card-default/card-default.component';
 import { CardImageComponent } from './components/template/cards/card-image/card-image.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlashcardsViewComponent } from './components/template/views/flashcards-view/flashcards-view.component';
+import { DashboardViewComponent } from './components/template/views/dashboard-view/dashboard-view.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     CardDefaultComponent,
     CardImageComponent,
+    FlashcardsViewComponent,
+    DashboardViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [MainComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
