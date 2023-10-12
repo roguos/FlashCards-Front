@@ -1,4 +1,9 @@
 :host{
-    display: flex;
+    display: block;
     width: 100%;
+}
+.newcard-button{
+    position: absolute;
+    bottom: 75px;
+    right: 15px;
 }

@@ -1,2 +1,10 @@
-<app-carousel >
-</app-carousel>
+<app-carousel> </app-carousel>
+<button mat-fab extended color="primary" class="newcard-button" (click)="openDialog()">
+  <mat-icon>add</mat-icon>
+  Novo Flashcard
+</button>
+<ol>
+  <li *ngIf="animal">
+    You chose: <em>{{ animal }}</em>
+  </li>
+</ol>

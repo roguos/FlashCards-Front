@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,7 +6,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
-  @Input() show: number = 1
   @Output() onShowChenge = new EventEmitter<number>();
 
   on(int: number) {

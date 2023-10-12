@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IFlashcard } from 'src/app/interfaces/flashcard';
 import { FlashcardsService } from 'src/app/services/flashcards.service';
 
@@ -7,10 +7,13 @@ import { FlashcardsService } from 'src/app/services/flashcards.service';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
 })
-export class CarouselComponent {
-  constructor(public FCService: FlashcardsService) {}
+export class CarouselComponent implements OnInit {
   localFlashcards: IFlashcard[] = [];
-  onInit() {
+  focus1: boolean = true;
+  focus2: boolean = false;
+  focus3: boolean = false;
+  constructor(public FCService: FlashcardsService) {}
+  ngOnInit(): void {
     this.FCService.flashcards.subscribe((data) => {
       this.localFlashcards = data;
     });

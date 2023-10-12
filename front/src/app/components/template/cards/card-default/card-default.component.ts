@@ -7,6 +7,7 @@ import { IFlashcard } from 'src/app/interfaces/flashcard';
   styleUrls: ['./card-default.component.css'],
 })
 export class CardDefaultComponent {
+  @Input() focus: boolean = false;
   @Input() cardData: IFlashcard = {
     id: 0,
     title: 'Este é um Título',
@@ -15,7 +16,6 @@ export class CardDefaultComponent {
     topic: 'Este é o Tópico/Matéria',
   };
   active: boolean = true;
-  focus: boolean = true;
   handleFlapCards() {
     if (this.focus) {
       this.active = !this.active;

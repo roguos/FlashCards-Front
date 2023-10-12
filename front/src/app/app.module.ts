@@ -20,12 +20,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 import { CardDefaultComponent } from './components/template/cards/card-default/card-default.component';
 import { CardImageComponent } from './components/template/cards/card-image/card-image.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlashcardsViewComponent } from './components/template/views/flashcards-view/flashcards-view.component';
 import { DashboardViewComponent } from './components/template/views/dashboard-view/dashboard-view.component';
 import { CarouselComponent } from './components/template/carousel/carousel.component';
+import { CreateFlashcardModalComponent } from './components/template/create-flashcard-modal/create-flashcard-modal.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,7 @@ import { CarouselComponent } from './components/template/carousel/carousel.compo
     FlashcardsViewComponent,
     DashboardViewComponent,
     CarouselComponent,
+    CreateFlashcardModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +61,8 @@ import { CarouselComponent } from './components/template/carousel/carousel.compo
     MatCardModule,
     MatListModule,
     HttpClientModule,
+    MatDialogModule,
+    MatFormFieldModule,
   ],
   providers: [MainComponent],
   bootstrap: [AppComponent],
