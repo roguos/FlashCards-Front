@@ -1,4 +1,4 @@
 # FlashCards-Front
 
 Nada novo, de novo!
-Teste commit
+Dor e sofrimento!
