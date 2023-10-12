@@ -70,5 +70,13 @@
       "text": "Quais são as principais organizações internacionais de direitos humanos?",
       "topic": "Política"
     }
+  ],
+  "users":[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "missed": 3,
+      "right": 5
+    }
   ]
 }

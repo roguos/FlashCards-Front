@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IFlashcard } from 'src/app/interfaces/flashcard';
 import { FlashcardsService } from 'src/app/services/flashcards.service';
 
 @Component({
@@ -8,4 +9,10 @@ import { FlashcardsService } from 'src/app/services/flashcards.service';
 })
 export class CarouselComponent {
   constructor(public FCService: FlashcardsService) {}
+  localFlashcards: IFlashcard[] = [];
+  onInit() {
+    this.FCService.flashcards.subscribe((data) => {
+      this.localFlashcards = data;
+    });
+  }
 }

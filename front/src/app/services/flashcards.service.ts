@@ -7,14 +7,7 @@ import { IFlashcard } from '../interfaces/flashcard';
 })
 export class FlashcardsService {
   constructor(private http: HttpClient) {}
-
-  flashcards: IFlashcard[] = [];
-
-  getflashcards() {
-    this.http
-      .get<IFlashcard[]>('http://localhost:3000/flashcards')
-      .subscribe((data) => {
-        this.flashcards = data;
-      });
+  get flashcards() {
+    return this.http.get<IFlashcard[]>('http://localhost:3000/flashcards');
   }
 }

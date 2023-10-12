@@ -1,4 +1,4 @@
 <app-header></app-header>
-<app-sidebar (show)="(show)"></app-sidebar>
+<app-sidebar [show]="show" (onShowChenge)="show = $event"></app-sidebar>
 <app-main [show]="show"></app-main>
 <app-footer></app-footer>

@@ -9,10 +9,10 @@ import { FlashcardsService } from 'src/app/services/flashcards.service';
 })
 export class MainComponent {
   constructor(public FCService: FlashcardsService) {}
-  @Input() show: Number = 1;
+  @Input() show: number = 1;
 
-  setShow(i: Number) {
-    this.show = i;
+  setShow() {
+    console.log(this.show)
   }
   arrayLocal: IFlashcard[] = [
     { id: 0, title: '', tip: '', text: '', topic: '' },

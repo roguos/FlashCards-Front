@@ -4,3 +4,7 @@
     overflow: auto;
     margin-left: 56px;
 }
+div{
+    width: 100%;
+    height: 100%;
+}

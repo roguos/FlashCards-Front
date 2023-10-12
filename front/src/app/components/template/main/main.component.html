@@ -1,14 +1,5 @@
-<!-- <ng-container *ngFor="let card of FCService.flashcards">
-  <app-card-default [cardData]="card"></app-card-default>
-</ng-container> -->
 <div [ngSwitch]="show">
   <app-flashcards-view *ngSwitchCase="1"></app-flashcards-view>
   <app-dashboard-view *ngSwitchCase="2"></app-dashboard-view>
 </div>
-<div>
-  <button (click)="setShow(1)">set1</button>
-  <button (click)="setShow(2)">set2</button>
-</div>
-<app-carousel>
-  <app-card-default></app-card-default>
-</app-carousel>
+

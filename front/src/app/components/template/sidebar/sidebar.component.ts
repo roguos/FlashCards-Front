@@ -6,10 +6,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
-  @Output() show = new EventEmitter<Number>();
+  @Input() show: number = 1
+  @Output() onShowChenge = new EventEmitter<number>();
 
-  on(int: Number) {
-    this.show.emit(int);
+  on(int: number) {
+    this.onShowChenge.emit(int);
   }
   boo: boolean = true;
 

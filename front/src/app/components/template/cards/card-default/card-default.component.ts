@@ -15,7 +15,7 @@ export class CardDefaultComponent {
     topic: 'Este é o Tópico/Matéria',
   };
   active: boolean = true;
-  focus: boolean = false;
+  focus: boolean = true;
   handleFlapCards() {
     if (this.focus) {
       this.active = !this.active;
