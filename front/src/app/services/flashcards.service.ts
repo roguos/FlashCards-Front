@@ -8,6 +8,6 @@ import { IFlashcard } from '../interfaces/flashcard';
 export class FlashcardsService {
   constructor(private http: HttpClient) {}
   get flashcards() {
-    return this.http.get<IFlashcard[]>('http://localhost:3000/flashcards');
+    return this.http.get<IFlashcard[]>('assets/json/DB.json');
   }
 }

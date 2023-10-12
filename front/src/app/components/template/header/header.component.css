@@ -9,6 +9,4 @@
 .header-avatar {
   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
-  width: 32px;
-  height: 32px;
 }

@@ -30,7 +30,6 @@ export class CarouselComponent implements OnInit {
     }
   }
   localFlashcards: IFlashcard[] = [];
-  // focus: boolean = true;
   constructor(public FCService: FlashcardsService) {}
   ngOnInit(): void {
     this.FCService.flashcards.subscribe((data) => {
