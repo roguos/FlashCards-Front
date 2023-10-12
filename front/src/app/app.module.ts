@@ -29,6 +29,7 @@ import { FlashcardsViewComponent } from './components/template/views/flashcards-
 import { DashboardViewComponent } from './components/template/views/dashboard-view/dashboard-view.component';
 import { CarouselComponent } from './components/template/carousel/carousel.component';
 import { CreateFlashcardModalComponent } from './components/template/create-flashcard-modal/create-flashcard-modal.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { CreateFlashcardModalComponent } from './components/template/create-flas
     BrowserAnimationsModule,
     FormsModule,
     MatToolbarModule,
+    MatInputModule,
     MatSidenavModule,
     MatButtonModule,
     MatCheckboxModule,
