@@ -6,7 +6,13 @@
   align-items: center;
   justify-content: center;
   padding: 35px 0px;
-  background: linear-gradient(0deg, #0771ee00 2%, var(--carousel_gradient) 22%, var(--carousel_gradient) 78%, #01bf3a00 98%);
+  background: linear-gradient(
+    0deg,
+    #0771ee00 2%,
+    var(--carousel_gradient) 22%,
+    var(--carousel_gradient) 78%,
+    #01bf3a00 98%
+  );
 }
 
 input[type="radio"] {
@@ -72,10 +78,7 @@ input[type="radio"] {
 }
 #item-1:checked ~ .cards #item-1 .content,
 #item-2:checked ~ .cards #item-2 .content,
-#item-3:checked ~ .cards #item-3 .content {
-  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-}
-#item-2:checked ~ .player #test {
+#item-3:checked ~ .cards #item-3 .content #item-2:checked ~ .player #test {
   transform: translateY(0);
 }
 
