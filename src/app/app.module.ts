@@ -30,6 +30,8 @@ import { DashboardViewComponent } from './components/template/views/dashboard-vi
 import { CarouselComponent } from './components/template/carousel/carousel.component';
 import { CreateFlashcardModalComponent } from './components/template/create-flashcard-modal/create-flashcard-modal.component';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { MatInputModule } from '@angular/material/input';
     HttpClientModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatSnackBarModule,
+    MatTooltipModule,
   ],
   providers: [MainComponent],
   bootstrap: [AppComponent],

@@ -1,25 +1,49 @@
-<h1 mat-dialog-title>Hi Fulano</h1>
+<h1 mat-dialog-title>Criar Flashcard</h1>
+<mat-divider></mat-divider>
 <div mat-dialog-content>
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Placeholder" />
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Placeholder" />
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Placeholder" />
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Matéria/Tópico</mat-label>
+      <input matInput placeholder="" type="text" />
+      <mat-hint>Ex.: Matemática</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Título</mat-label>
+      <input matInput placeholder="" type="text" />
+      <mat-hint>Ex.: Formula de Bhaskara</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Dica</mat-label>
+      <input matInput placeholder="" type="text" />
+      <mat-hint>Ex.: Equação do 2º grau</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Texto/Descrição</mat-label>
+      <textarea
+        matInput
+        placeholder="Ex. A fórmula de Bhaskara é um método resolutivo..."
+      ></textarea>
+    </mat-form-field>
+  </p>
 </div>
+<mat-divider></mat-divider>
 <div mat-dialog-actions>
-  <button mat-button (click)="handleClosed()">No Thanks</button>
-  <button mat-button cdkFocusInitial>Ok</button>
+  <span class="spacer"></span>
+  <button mat-button (click)="handleClosed()" color="warn">Cancelar</button>
+  <span class="spacer"></span>
+  <button
+    mat-button
+    cdkFocusInitial
+    (click)="message('criado com sucesso!')"
+    color="primary"
+  >
+    Ok
+  </button>
+  <span class="spacer"></span>
 </div>

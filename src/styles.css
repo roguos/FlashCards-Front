@@ -1,5 +1,10 @@
 :root {
-  --carousel_gradient: #9f9f9f40;
+  --carousel_gradient: #9f9f9f24;
+  --card_bg-front: #e0fbee;
+  --card_bg-back: #e0fafb;
+}
+*{
+  -webkit-tap-highlight-color: transparent;
 }
 html,
 body {
@@ -13,7 +18,7 @@ body {
 .spacer {
   flex: 1 1 auto;
 }
-.nav-list a span {
+.nav-list a span{
   display: flex;
 }
 /* width */

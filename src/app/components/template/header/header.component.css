@@ -1,3 +1,6 @@
+.header{
+  height: 54px;
+}
 .header a {
   display: flex;
   align-items: center;
@@ -5,8 +8,4 @@
 }
 .header .logo {
   height: 32px;
-}
-.header-avatar {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-  background-size: cover;
 }

@@ -8,11 +8,15 @@ import { FlashcardsService } from 'src/app/services/flashcards.service';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
+  permission: boolean = true;
+  permission1: boolean = false;
+  permission2: boolean = false;
+  permission3: boolean = false;
   focus1: boolean = true;
   focus2: boolean = false;
   focus3: boolean = false;
 
-  teste(arg1: number) {
+  handleChecked(arg1: number) {
     if (arg1 == 1) {
       this.focus1 = true;
       this.focus2 = false;

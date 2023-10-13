@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { IFlashcard } from 'src/app/interfaces/flashcard';
 
 @Component({
@@ -15,10 +15,19 @@ export class CardDefaultComponent {
     text: 'Este é o Texto',
     topic: 'Este é o Tópico/Matéria',
   };
-  active: boolean = true;
+  @Output() onPermissionChange = new EventEmitter<boolean>();
+  active: boolean = false;
+  permission: boolean = true;
   handleFlapCards() {
-    if (this.focus) {
+    if (this.focus && this.permission) {
+      if (!this.active) {
+        this.permission = false;
+      }
       this.active = !this.active;
     }
+  }
+  handleResult(n: number) {
+    this.permission = true;
+    this.onPermissionChange.emit(this.permission);
   }
 }

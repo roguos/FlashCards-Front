@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 0;
   justify-content: flex-end;
+  height: 40px;
 }
 .footer span {
   font-size: small;
@@ -18,4 +19,14 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 599.98px){
+  .footer span{
+    font-size: .5rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 959.98px){
+  .footer span{
+    font-size: 1rem;
+  }
 }
