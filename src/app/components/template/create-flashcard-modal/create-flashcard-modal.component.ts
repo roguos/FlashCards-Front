@@ -16,6 +16,6 @@ export class CreateFlashcardModalComponent {
     this.dialogRef.close();
   }
   message(msg: string) {
-    this.flascardsService.showMessage(msg, 'success');
+    this.flascardsService.showMessage(msg);
   }
 }
