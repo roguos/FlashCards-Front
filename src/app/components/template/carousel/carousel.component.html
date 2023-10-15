@@ -1,7 +1,7 @@
 <div class="container">
-  <input type="radio" name="slider" id="item-1" (change)="handleChecked(1)" checked [disabled]="permission1"/>
-  <input type="radio" name="slider" id="item-2" (change)="handleChecked(2)" [disabled]="permission2"/>
-  <input type="radio" name="slider" id="item-3" (change)="handleChecked(3)" [disabled]="permission3"/>
+  <input type="radio" name="slider" id="item-1" (change)="handleChecked(1)" checked [disabled]="!permission"/>
+  <input type="radio" name="slider" id="item-2" (change)="handleChecked(2)" [disabled]="!permission"/>
+  <input type="radio" name="slider" id="item-3" (change)="handleChecked(3)" [disabled]="!permission"/>
 
   <div class="cards">
     <label
@@ -13,6 +13,7 @@
       <div class="content">
         <app-card-default
           [cardData]="localFlashcards[i - 1]"
+          (onResponse)="handleResponse($event)"
           (onPermissionChange)="permission = $event"
           [focus]="
             i === 1 ? focus1 : i === 2 ? focus2 : i === 3 ? focus3 : false

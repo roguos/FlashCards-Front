@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IFlashcard } from 'src/app/interfaces/flashcard';
+import { ICardResult, IFlashcard } from 'src/app/interfaces/flashcard';
 import { FlashcardsService } from 'src/app/services/flashcards.service';
 
 @Component({
@@ -8,10 +8,13 @@ import { FlashcardsService } from 'src/app/services/flashcards.service';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
+  constructor(public FCService: FlashcardsService) {}
+  ngOnInit(): void {
+    this.FCService.flashcards.subscribe((data) => {
+      this.localFlashcards = data;
+    });
+  }
   permission: boolean = true;
-  permission1: boolean = false;
-  permission2: boolean = false;
-  permission3: boolean = false;
   focus1: boolean = true;
   focus2: boolean = false;
   focus3: boolean = false;
@@ -33,11 +36,13 @@ export class CarouselComponent implements OnInit {
       this.focus3 = true;
     }
   }
-  localFlashcards: IFlashcard[] = [];
-  constructor(public FCService: FlashcardsService) {}
-  ngOnInit(): void {
-    this.FCService.flashcards.subscribe((data) => {
-      this.localFlashcards = data;
-    });
+  handleResponse(r: ICardResult) {
+    // Enviar resultado 'r.result: number' para o back acrescentar na lista de erros ou acertos: 1 = acerto
+    console.log(r.card);
+    this.localFlashcards = this.localFlashcards.filter(
+      (item) => item !== r.card
+    );
+    console.log(this.localFlashcards);
   }
+  localFlashcards: IFlashcard[] = [];
 }

@@ -1,38 +1,58 @@
 <div class="card" (click)="handleFlapCards()">
-  <mat-card [class]="{ front: true, active: active}" >
-    <mat-card-header>
-      <mat-card-subtitle>{{ cardData && cardData.topic ? cardData.topic : 'Aguardando' }}</mat-card-subtitle>
-      <mat-card-title>{{ cardData && cardData.title ? cardData.title : 'Aguardando' }}</mat-card-title>
+  <mat-card [class]="{ front: true, active: active }">
+    <mat-card-header *ngIf="active">
+      <mat-card-subtitle>{{
+        cardData && cardData.topic ? cardData.topic : "Aguardando"
+      }}</mat-card-subtitle>
+      <mat-card-title>{{
+        cardData && cardData.title ? cardData.title : "Aguardando"
+      }}</mat-card-title>
     </mat-card-header>
     <img
       mat-card-lg-image
-      *ngIf="cardData.image"
+      *ngIf="cardData && cardData.image && active ? cardData.image : false"
       [src]="cardData.image"
       alt="Photo of a Shiba Inu"
     />
-    <mat-card-content>
+    <mat-card-content *ngIf="active">
       <p>
-        {{ cardData && cardData.text ? cardData.text : 'Aguardando' }}
+        {{ cardData && cardData.text ? cardData.text : "Aguardando" }}
       </p>
     </mat-card-content>
-    <mat-card-footer>
-      <span class="spacer" ></span>
-      <button mat-icon-button aria-label="Errou" matTooltip="Errou" matTooltipPosition="above" (click)="handleResult(0)">
+    <mat-card-footer *ngIf="active">
+      <span class="spacer"></span>
+      <button
+        mat-icon-button
+        aria-label="Errou"
+        matTooltip="Errou"
+        matTooltipPosition="above"
+        (click)="handleResult(0)"
+      >
         <mat-icon class="wrong">close</mat-icon>
       </button>
-      <span class="spacer" ></span>
-      <button mat-icon-button aria-label="Acertou" matTooltip="Acertou" matTooltipPosition="above" (click)="handleResult(1)">
+      <span class="spacer"></span>
+      <button
+        mat-icon-button
+        aria-label="Acertou"
+        matTooltip="Acertou"
+        matTooltipPosition="above"
+        (click)="handleResult(1)"
+      >
         <mat-icon class="done">done</mat-icon>
       </button>
-      <span class="spacer" ></span>
+      <span class="spacer"></span>
     </mat-card-footer>
   </mat-card>
   <mat-card [class]="{ back: true, active: !active }">
-    <mat-card-header>
-      <mat-card-subtitle>{{ cardData && cardData.topic ? cardData.topic : 'Aguardando' }}</mat-card-subtitle>
+    <mat-card-header class="back_content">
+      <mat-card-subtitle>{{
+        cardData && cardData.topic ? cardData.topic : "Aguardando"
+      }}</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content>
-      <mat-card-title>{{ cardData && cardData.tip ? cardData.tip : 'Aguardando' }}</mat-card-title>
+    <mat-card-content class="back_content">
+      <mat-card-title>{{
+        cardData && cardData.tip ? cardData.tip : "Aguardando"
+      }}</mat-card-title>
     </mat-card-content>
   </mat-card>
 </div>
