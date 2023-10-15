@@ -2,6 +2,7 @@
   margin-top: 35px;
   width: 100%;
   height: 350px;
+  max-height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +34,7 @@ input[type="radio"] {
 .container {
   width: 100%;
   max-width: 800px;
-  max-height: 350px;
+  max-height: fit-content;
   height: 100%;
   transform-style: preserve-3d;
   display: flex;

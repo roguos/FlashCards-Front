@@ -3,8 +3,9 @@
     "id": 1,
     "title": "Matemática Básica",
     "tip": "Dica de estudo",
-    "text": "Qual é a fórmula para calcular a área de um triângulo?",
-    "topic": "Matemática"
+    "text": "Qual é a fórmula para calcular a área de um triângulo? ",
+    "topic": "Matemática",
+    "image": "https://static.mundoeducacao.uol.com.br/mundoeducacao/2021/12/area-do-triangulo.jpg"
   },
   {
     "id": 2,
@@ -18,7 +19,8 @@
     "title": "Biologia",
     "tip": "Dica de revisão",
     "text": "Qual é a função principal do sistema nervoso humano?",
-    "topic": "Biologia"
+    "topic": "Biologia",
+    "image": "https://static.biologianet.com/conteudo/images/o-neuronio-uma-celula-tecido-nervoso-responsavel-pela-transmissao-impulso-nervoso-53fe4f0c38729.jpg"
   },
   {
     "id": 4,

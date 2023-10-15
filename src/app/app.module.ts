@@ -23,7 +23,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CardDefaultComponent } from './components/template/cards/card-default/card-default.component';
-import { CardImageComponent } from './components/template/cards/card-image/card-image.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlashcardsViewComponent } from './components/template/views/flashcards-view/flashcards-view.component';
 import { DashboardViewComponent } from './components/template/views/dashboard-view/dashboard-view.component';
@@ -32,6 +31,8 @@ import { CreateFlashcardModalComponent } from './components/template/create-flas
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { DashboardTesteComponent } from './components/template/dashboard-teste/dashboard-teste.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -43,11 +44,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     LoginComponent,
     HomeComponent,
     CardDefaultComponent,
-    CardImageComponent,
     FlashcardsViewComponent,
     DashboardViewComponent,
     CarouselComponent,
     CreateFlashcardModalComponent,
+    DashboardTesteComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +70,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatFormFieldModule,
     MatSnackBarModule,
     MatTooltipModule,
+    MatGridListModule,
   ],
   providers: [MainComponent],
   bootstrap: [AppComponent],
