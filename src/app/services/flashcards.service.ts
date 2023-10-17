@@ -7,14 +7,25 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class FlashcardsService {
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
-  showMessage(msg: string): void {
+  showMessage(msg: string, error: boolean = false): void {
     this.snackBar.open(msg, 'X', {
       duration: 3500,
       horizontalPosition: 'right',
-      verticalPosition: 'bottom'
+      verticalPosition: 'top',
+      panelClass: error ? ['msg-error'] : ['msg-success'],
     });
   }
   get flashcards() {
-    return this.http.get<IFlashcard[]>('assets/json/DB.json');
+    const data = JSON.parse(this.verificarLocalStorage());
+    return data;
+  }
+  verificarLocalStorage(): string{
+    if (!localStorage.getItem('flashcards')) {
+      this.http.get<IFlashcard[]>('assets/json/DB.json').subscribe((data) => {
+        const cards = JSON.stringify(data);
+        localStorage.setItem('flashcards', cards);
+      });
+    }
+    return localStorage.getItem('flashcards')!;
   }
 }

@@ -10,9 +10,7 @@ import { FlashcardsService } from 'src/app/services/flashcards.service';
 export class CarouselComponent implements OnInit {
   constructor(public FCService: FlashcardsService) {}
   ngOnInit(): void {
-    this.FCService.flashcards.subscribe((data) => {
-      this.localFlashcards = data;
-    });
+    this.localFlashcards = this.FCService.flashcards;
   }
   permission: boolean = true;
   focus1: boolean = true;
@@ -37,12 +35,12 @@ export class CarouselComponent implements OnInit {
     }
   }
   handleResponse(r: ICardResult) {
-    // Enviar resultado 'r.result: number' para o back acrescentar na lista de erros ou acertos: 1 = acerto
+    // Enviar resultado 'r.result: number' para o back
+    // acrescentar na lista de erros ou acertos: 1 = acerto
     console.log(r.card);
     this.localFlashcards = this.localFlashcards.filter(
       (item) => item !== r.card
     );
-    console.log(this.localFlashcards);
   }
   localFlashcards: IFlashcard[] = [];
 }
