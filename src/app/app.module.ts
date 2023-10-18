@@ -31,7 +31,6 @@ import { CreateFlashcardModalComponent } from './components/template/create-flas
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { DashboardTesteComponent } from './components/template/dashboard-teste/dashboard-teste.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
@@ -48,7 +47,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
     DashboardViewComponent,
     CarouselComponent,
     CreateFlashcardModalComponent,
-    DashboardTesteComponent,
   ],
   imports: [
     BrowserModule,
