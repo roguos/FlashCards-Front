@@ -32,6 +32,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { DeleteFlashcardModalComponent } from './components/template/delete-flashcard-modal/delete-flashcard-modal.component';
+import { EditFlashcardModalComponent } from './components/template/edit-flashcard-modal/edit-flashcard-modal.component';
+import { FilterBarComponent } from './components/template/filter-bar/filter-bar.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     DashboardViewComponent,
     CarouselComponent,
     CreateFlashcardModalComponent,
+    DeleteFlashcardModalComponent,
+    EditFlashcardModalComponent,
+    FilterBarComponent,
   ],
   imports: [
     BrowserModule,

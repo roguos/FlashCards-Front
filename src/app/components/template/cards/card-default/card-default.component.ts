@@ -1,5 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ICardResult, IFlashcard } from 'src/app/interfaces/flashcard';
+import { DeleteFlashcardModalComponent } from '../../delete-flashcard-modal/delete-flashcard-modal.component';
+import { EditFlashcardModalComponent } from '../../edit-flashcard-modal/edit-flashcard-modal.component';
 
 @Component({
   selector: 'app-card-default',
@@ -7,6 +10,7 @@ import { ICardResult, IFlashcard } from 'src/app/interfaces/flashcard';
   styleUrls: ['./card-default.component.css'],
 })
 export class CardDefaultComponent {
+  constructor(public dialog: MatDialog) {}
   @Input() focus: boolean = false;
   @Input() cardData: IFlashcard = {
     id: 0,
@@ -33,5 +37,15 @@ export class CardDefaultComponent {
     this.onResponse.emit({ card: this.cardData, result: n });
     this.permission = true;
     this.onPermissionChange.emit(this.permission);
+  }
+  openDialogDelete() {
+    this.dialog.open(DeleteFlashcardModalComponent, {
+      width: '250px',
+    });
+  }
+  openDialogEdit() {
+    this.dialog.open(EditFlashcardModalComponent, {
+      width: '500px',
+    });
   }
 }

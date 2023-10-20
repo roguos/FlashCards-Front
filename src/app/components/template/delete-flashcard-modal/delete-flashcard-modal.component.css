@@ -1,0 +1,10 @@
+.spacer {
+  flex: 1 1 auto;
+}
+.content{
+    margin: auto;
+}
+.options{
+    display: flex;
+    justify-content: space-evenly;
+}

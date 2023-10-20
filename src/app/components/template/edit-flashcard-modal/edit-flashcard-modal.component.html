@@ -1,20 +1,17 @@
-<h1 mat-dialog-title>Criar Flashcard</h1>
+<h1 mat-dialog-title>Editar Flashcard</h1>
 <mat-divider></mat-divider>
 <div mat-dialog-content>
   <mat-form-field appearance="fill">
     <mat-label>Matéria/Tópico</mat-label>
     <input matInput placeholder="" type="text" />
-    <mat-hint>Ex.: Matemática</mat-hint>
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Título</mat-label>
     <input matInput placeholder="" type="text" />
-    <mat-hint>Ex.: Formula de Bhaskara</mat-hint>
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Dica</mat-label>
     <input matInput placeholder="" type="text" />
-    <mat-hint>Ex.: Equação do 2º grau</mat-hint>
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>URL da imagem</mat-label>
@@ -22,10 +19,7 @@
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Texto/Descrição</mat-label>
-    <textarea
-      matInput
-      placeholder="Ex. A fórmula de Bhaskara é um método resolutivo..."
-    ></textarea>
+    <textarea matInput placeholder=""></textarea>
   </mat-form-field>
 </div>
 <mat-divider></mat-divider>
@@ -36,7 +30,7 @@
   <button
     mat-button
     cdkFocusInitial
-    (click)="message('criado com sucesso!')"
+    (click)="message('Editado com sucesso!')"
     color="primary"
   >
     Ok

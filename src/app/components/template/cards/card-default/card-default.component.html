@@ -7,6 +7,26 @@
       <mat-card-title>{{
         cardData && cardData.title ? cardData.title : "Aguardando"
       }}</mat-card-title>
+      <div class="options">
+        <button
+          mat-icon-button
+          aria-label="Editar"
+          matTooltip="Editar"
+          matTooltipPosition="above"
+          (click)="openDialogEdit()"
+        >
+          <mat-icon class="edit">edit</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          aria-label="Excluir"
+          matTooltip="Excluir"
+          matTooltipPosition="above"
+          (click)="openDialogDelete()"
+        >
+          <mat-icon class="delete">delete_forever</mat-icon>
+        </button>
+      </div>
     </mat-card-header>
     <img
       mat-card-lg-image
